@@ -1,0 +1,86 @@
+.selected {
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+
+.winningPlayer {
+    border-bottom: 2px solid #0d4978;
+}
+
+.disabled_cursor {
+    pointer-events: none;
+}
+
+.empity {
+    position: absolute;
+    visibility: hidden;
+}
+
+.diagonal1, .diagonal2 {
+    background-color: #11609e;
+    height: 675px;
+    width: 8px;
+    position: absolute;
+    margin: -87.5px 0 0 245px;
+    border-radius: 10px;
+    animation-name: growDiagonal;
+    animation-duration: .8s;
+}
+.diagonal1 {
+    transform:  rotate(-45deg);
+}
+.diagonal2 {
+    transform: rotate(45deg);
+}
+@keyframes growDiagonal{
+    from {height: 0; margin-top: 244px}
+    to {height: 675px;}
+}
+
+.lineV1, .lineV2, .lineV3 {
+    background-color: #11609e;
+    height: 488px;
+    width: 8px;
+    position: absolute;
+    border-radius: 10px;
+    animation-name: growLineV;
+    animation-duration: .8s;
+}
+.lineV1 {
+    margin: 6px 0 0 79px;
+}
+.lineV2{
+    margin: 6px 0 0 245px;
+}
+.lineV3{
+    margin: 6px 0 0 414px;
+}
+
+@keyframes growLineV{
+    from {height: 0; margin-top: 250px;}
+    to {height: 488px;}
+}
+
+.lineH1, .lineH2, .lineH3 {
+    background-color: #11609e;
+    height: 8px;
+    width: 488px;
+    position: absolute;
+    border-radius: 10px;
+    animation-name: growLineH;
+    animation-duration: .8s;
+}
+.lineH1 {
+    margin: 79px 0 0 6px;
+}
+.lineH2{
+    margin: 245px 0 0 6px;
+}
+.lineH3{
+    margin: 414px 0 0 6px;
+}
+
+@keyframes growLineH{
+    from {width: 0; margin-left: 250px;}
+    to {width: 488px;}
+}
